@@ -10,7 +10,7 @@ import re
 import tempfile
 import shutil
 import subprocess
-import httpx
+
 import json
 import csv
 from typing import Optional, Dict, Any, List
@@ -299,7 +299,7 @@ async def convert_keyvalue_to_json(file_path: str) -> str:
     """
     try:
         import json
-        import httpx
+        
         import hashlib
 
         # Initialize an empty dictionary to store key-value pairs
@@ -1402,7 +1402,7 @@ async def analyze_sentiment(text: str, api_key: str = "dummy_api_key") -> str:
     """
     Analyze sentiment of text using OpenAI API
     """
-    import httpx
+    
     import json
 
     url = "https://api.openai.com/v1/chat/completions"
@@ -1450,7 +1450,7 @@ async def count_tokens(text: str) -> str:
     """
     Count tokens in a message sent to OpenAI API
     """
-    import httpx
+    
     import json
 
     url = "https://api.openai.com/v1/chat/completions"
@@ -1573,7 +1573,7 @@ async def count_cricket_ducks(page_number: int = 3) -> str:
     """
     try:
         import pandas as pd
-        import httpx
+        
         from bs4 import BeautifulSoup
 
         # Construct the URL for the specified page
@@ -1658,7 +1658,7 @@ async def get_imdb_movies(
         JSON data of movies with their ID, title, year, and rating
     """
     try:
-        import httpx
+        
         from bs4 import BeautifulSoup
         import json
         import re
@@ -1744,7 +1744,7 @@ async def generate_country_outline(country: str) -> str:
         Markdown outline of the country's Wikipedia page
     """
     try:
-        import httpx
+        
         from bs4 import BeautifulSoup
         import urllib.parse
 
@@ -1824,7 +1824,7 @@ async def get_weather_forecast(city: str) -> str:
         JSON data of weather forecast with dates and descriptions
     """
     try:
-        import httpx
+        
         import json
 
         # Step 1: Get the location ID for the city
@@ -2097,7 +2097,7 @@ async def compute_document_similarity(docs: List[str], query: str) -> str:
     try:
         import numpy as np
         import json
-        import httpx
+        
         from typing import List, Dict
 
         # Function to calculate cosine similarity
@@ -2151,7 +2151,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List
-import httpx
+
 import numpy as np
 
 app = FastAPI()
@@ -2424,7 +2424,7 @@ async def get_delhi_bounding_box() -> str:
         Information about Delhi's bounding box
     """
     try:
-        import httpx
+        
         import json
         import asyncio  # Make sure this import is present
 
@@ -2486,7 +2486,7 @@ async def find_duckdb_hn_post() -> str:
         Information about the post and its link
     """
     try:
-        import httpx
+        
         import xml.etree.ElementTree as ET
 
         # HNRSS API endpoint for searching posts with minimum points
@@ -2566,7 +2566,7 @@ async def find_newest_seattle_github_user() -> str:
         Information about the user and when their profile was created
     """
     try:
-        import httpx
+        
         import json
         from datetime import datetime
 
